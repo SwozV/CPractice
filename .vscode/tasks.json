@@ -8,9 +8,10 @@
             "args": [
                 "-fdiagnostics-color=always",
                 "-g", //生成和调试有关的信息
-                "${file}", //c++更换为*.cpp
+                "${file}",
                 "-o",
                 "${fileDirname}\\bin\\${fileBasenameNoExtension}.exe",
+                "-lws2_32", // 链接winsock lib库
                 "-Wall", // 开启额外警告
                 "-static-libgcc", // 静态链接libgcc
                 "-fexec-charset=UTF-8", // 生成文件编码
